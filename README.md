@@ -63,3 +63,30 @@ class SampleModule(ModuleBase):
         return True
 
 ```
+
+## Sample commands
+
+Listing modules
+
+```bash
+$ frida-fusion --list-modules
+
+ [ FRIDA ]—o—( FUSION )—o—[ MOBILE TESTS ] // v0.1.5
+     > hook your mobile tests with Frida
+
+
+Available internal modules
+  crypto                : Hook cryptography/hashing functions
+  multiple_unpinning    : Use frida_multiple_unpinning by Maurizio Siddu (@akabe1)
+
+Available external modules
+  okhttp3_logging       : Use okhttp-logging by Helvio Junior (M4v3r1ck)
+  fridantiroot          : Use fridantiroot by @dzonerzy
+
+```
+
+Running with modules
+
+```bash
+$ frida-fusion -f [app_id] -U --script-path . -m crypto -m multiple_unpinning -m fridantiroot
+```
