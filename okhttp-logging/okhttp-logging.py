@@ -7,7 +7,7 @@ from frida_fusion.module import ModuleBase
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from frida_fusion.fusion import Fusion  # só no type checker
+    from frida_fusion.fusion import Fusion
 
 
 class OkHttpLogging(ModuleBase):
