@@ -21,6 +21,7 @@
 *.zip
 *.restore
 *.jar
+*.js
 *.tgz
 *.tar.gz
 
