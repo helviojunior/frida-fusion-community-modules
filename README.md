@@ -1,4 +1,4 @@
-# Frida Fusion - Community logs
+# Frida Fusion - Community modules
 
 This repo is part of Frida Fusion tool [https://github.com/helviojunior/frida-fusion/](https://github.com/helviojunior/frida-fusion/)
 
