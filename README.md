@@ -28,11 +28,7 @@ import os.path
 from pathlib import Path
 from frida_fusion.libs.logger import Logger
 from frida_fusion.module import ModuleBase
-
-from typing import TYPE_CHECKING
-
-if TYPE_CHECKING:
-    from frida_fusion.fusion import Fusion
+from frida_fusion.libs.scriptlocation import ScriptLocation
 
 
 class SampleModule(ModuleBase):
@@ -48,15 +44,20 @@ class SampleModule(ModuleBase):
         return []
 
     def key_value_event(self,
-                        script_location: "Fusion.ScriptLocation" = None,
+                        script_location: ScriptLocation = None,
                         stack_trace: str = None,
                         module: str = None,
                         received_data: dict = None
                         ) -> bool:
+        Logger.print_message(
+            level="W",
+            message=f"key_value_event received",
+            script_location=script_location
+        )
         return True
 
     def data_event(self,
-                   script_location: "Fusion.ScriptLocation" = None,
+                   script_location: ScriptLocation = None,
                    stack_trace: str = None,
                    received_data: str = None
                    ) -> bool:
