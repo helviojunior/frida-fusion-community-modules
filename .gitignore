@@ -82,3 +82,6 @@ var/
 **.egg-info/
 .installed.cfg
 *.egg
+
+# Include find-pairip-executevm
+!find-pairip-executevm/*.js
